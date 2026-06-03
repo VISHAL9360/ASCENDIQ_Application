@@ -1,4 +1,4 @@
-# 🚀 AscendIQ - AI-Powered Placement Management System
+#  AscendIQ - AI-Powered Placement Management System
 
 <div align="center">
   <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React" />
@@ -14,9 +14,9 @@
 
 ---
 
-## ✨ Key Features
+##  Key Features
 
-### 🎓 For Students
+###  For Students
 - **AI Resume Analyzer**: Upload your resume and instantly receive a parsed skill analysis, ATS score, and tailored improvement suggestions powered by Gemini AI.
 - **AI Mock Interviews**: Select your target domain (Software Engineering, Data Science, HR) and chat dynamically with an AI interviewer. Get real-time grading, model answers, and detailed feedback.
 - **Offer Tracker**: Dashboard to manage your placement offers, compare CTCs, and track your joining dates.
@@ -53,7 +53,7 @@
 
 ---
 
-## 🛠️ Local Setup & Installation
+##  Local Setup & Installation
 
 Follow these steps to run the AscendIQ platform on your local machine.
 
@@ -106,7 +106,7 @@ npm run dev
 
 ---
 
-## 🔒 Security & Roles
+##  Security & Roles
 The platform implements rigid Role-Based Access Control (RBAC):
 - `ROLE_STUDENT`: Access to learning, mock interviews, applying for drives.
 - `ROLE_RECRUITER`: Access to post drives, review applications, download resumes.
@@ -116,7 +116,7 @@ Authentication is handled securely via **JWT Bearer Tokens** passed in the HTTP 
 
 ---
 
-## 🤝 Contributing
+##  Contributing
 Contributions, issues, and feature requests are welcome!
 Feel free to check the [issues page](https://github.com/VISHAL9360/ASCENDIQ_Application/issues) if you want to contribute.
 

@@ -1,0 +1,49 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:15-alpine
+    environment:
+      POSTGRES_USER: placement_admin
+      POSTGRES_PASSWORD: placement_password
+      POSTGRES_DB: placement_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    networks:
+      - placement-net
+
+  backend:
+    build:
+      context: ./backend-springboot
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://postgres:5432/placement_db
+      - SPRING_DATASOURCE_USERNAME=placement_admin
+      - SPRING_DATASOURCE_PASSWORD=placement_password
+      - SPRING_PROFILES_ACTIVE=prod
+    depends_on:
+      - postgres
+    networks:
+      - placement-net
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
+    networks:
+      - placement-net
+
+volumes:
+  pgdata:
+
+networks:
+  placement-net:
+    driver: bridge

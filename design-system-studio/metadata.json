@@ -1,0 +1,6 @@
+{
+  "name": "Design System Studio",
+  "description": "An interactive playground, asset hub, and prompt generator for creating consistent, high-fidelity UI design systems in Tailwind CSS and React.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
